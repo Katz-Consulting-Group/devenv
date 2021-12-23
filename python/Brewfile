@@ -1,0 +1,18 @@
+tap "homebrew/core"
+
+brew "ipython"
+brew "pre-commit"
+brew "poetry"
+brew "cookiecutter"
+brew "pyinvoke"
+brew "bumpversion"
+brew "twine-pypi"
+brew "tox"
+brew "nox"
+brew "jupyterlab"
+brew "virtualenvwrapper"
+
+brew "pyenv"
+brew "pyenv-ccache"
+brew "pyenv-virtualenvwrapper"
+brew "pyenv-pip-migrate"
