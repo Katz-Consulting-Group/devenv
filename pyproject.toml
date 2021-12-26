@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "devenv"
+version = "0.1.0"
+description = ""
+authors = ["Omer Katz <omer.katz@omerkatz.com>"]
+license = "MIT"
+readme = "README.rst"
+
+include = ["Brewfile"]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkosi = {git = "https://github.com/systemd/mkosi.git", rev = "v12"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

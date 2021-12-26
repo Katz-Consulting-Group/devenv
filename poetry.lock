@@ -1,0 +1,22 @@
+[[package]]
+name = "mkosi"
+version = "12"
+description = "Build Bespoke OS Images"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/systemd/mkosi.git"
+reference = "v12"
+resolved_reference = "bf884c3f92fb19019c7252bfb09360a24adfc667"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "d089ba24952d0cf7838f9e5bb4aca7018e7f983c96c586d13a6b4239c42765f8"
+
+[metadata.files]
+mkosi = []

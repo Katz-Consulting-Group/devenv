@@ -1,0 +1,13 @@
+[Distribution]
+Distribution=ubuntu
+Release=impish
+
+[Output]
+Format=gpt_ext4
+ImageVersion=0.1.0
+Bootable=True
+Encrypt=all
+
+[Content]
+Packages=ubuntu-desktop,ubuntu-keyboard-hebrew,ca-certificates,curl,gnupg,lsb-release
+SourceFileTransfer=mount

@@ -1,0 +1,4 @@
+*.raw
+*.raw.manifest
+
+mkosi.cache/
