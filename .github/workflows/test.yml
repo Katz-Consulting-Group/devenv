@@ -23,7 +23,7 @@ jobs:
       - name: Install python dependencies
         run: poetry install
       - name: Install mkosi dependencies
-        run: sudo apt update && sudo apt install -y btrfs-progs e2fsprogs dosfstools xz-utils debootstrap systemd-container fdisk util-linux ubuntu-keyring
+        run: sudo apt update && sudo apt install -y cryptsetup btrfs-progs e2fsprogs dosfstools xz-utils debootstrap systemd-container fdisk util-linux ubuntu-keyring
       - name: Create mkosi.passphrase
         env:
           MKOSI_PASSPHRASE: ${{secrets.MKOSI_PASSPHRASE}}
