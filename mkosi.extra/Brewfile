@@ -1,5 +1,11 @@
 tap "homebrew/core"
 
+##################################################################
+#                         *Python Tools*                         #
+##################################################################
+
+# CLI Tools
+
 brew "ipython"
 brew "pre-commit"
 brew "poetry"
@@ -11,6 +17,8 @@ brew "tox"
 brew "nox"
 brew "jupyterlab"
 brew "virtualenvwrapper"
+
+# pyenv and related plugins
 
 brew "pyenv"
 brew "pyenv-ccache"

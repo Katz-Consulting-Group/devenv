@@ -2,11 +2,11 @@
 name = "devenv"
 version = "0.1.0"
 description = ""
-authors = ["Omer Katz <omer.katz@omerkatz.com>"]
+authors = ["Omer Katz <omer.katz@kcg.tech>"]
 license = "MIT"
 readme = "README.rst"
 
-include = ["Brewfile"]
+include = ["mkosi.extra/*"]
 
 
 [tool.poetry.dependencies]
