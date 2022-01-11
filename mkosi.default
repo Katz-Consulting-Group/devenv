@@ -7,7 +7,11 @@ Format=gpt_ext4
 ImageVersion=0.1.0
 Bootable=True
 Encrypt=all
+Minimize=True
 
 [Content]
 Packages=ubuntu-desktop,ubuntu-keyboard-hebrew,ca-certificates,curl,gnupg,lsb-release
 SourceFileTransfer=mount
+
+[Partitions]
+RootSize=10G
