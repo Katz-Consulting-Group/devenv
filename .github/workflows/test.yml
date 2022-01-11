@@ -30,6 +30,8 @@ jobs:
         run: |
           echo "$MKOSI_PASSPHRASE" >> mkosi.passphrase
           chmod 600 mkosi.passphrase
+      - name: Ensure mkosi.cache directory exists
+        run: mkdir -p mkosi.cache
       - name: Cache image dependencies
         uses: actions/cache@v1
         with:
