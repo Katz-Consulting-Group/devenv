@@ -1,0 +1,34 @@
+name: Test
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+      - name: Install CI dependencies
+        run: pip install poetry
+      - name: Cache poetry
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+      - name: Install python dependencies
+        run: poetry install
+      - name: Install mkosi dependencies
+        run: apt update && apt install -y btrfs-progs e2fsprogs dosfstools xz-utils debootstrap systemd-container fdisk util-linux ubuntu-keyring
+      - name: Create mkosi.passphrase
+        env:
+          MKOSI_PASSPHRASE: ${{secrets.MKOSI_PASSPHRASE}}
+        run: |
+          echo "$MKOSI_PASSPHRASE" >> mkosi.passphrase
+          chmod 600 mkosi.passphrase
+      - name: Build image
+        run: poetry run sudo --preserve-env=PATH env mkosi
