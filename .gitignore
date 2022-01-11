@@ -2,3 +2,5 @@
 *.raw.manifest
 
 mkosi.cache/
+
+.idea/
