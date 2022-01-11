@@ -30,5 +30,12 @@ jobs:
         run: |
           echo "$MKOSI_PASSPHRASE" >> mkosi.passphrase
           chmod 600 mkosi.passphrase
+      - name: Cache image dependencies
+        uses: actions/cache@v1
+        with:
+          path: mkosi.cache/
+          key: mkosi-${{ hashFiles('mkosi.cache/**') }}
+          restore-keys: |
+            mkosi-
       - name: Build image
         run: poetry run sudo --preserve-env=PATH env mkosi
