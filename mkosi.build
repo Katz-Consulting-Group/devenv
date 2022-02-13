@@ -7,6 +7,8 @@ set -o pipefail
 useradd dev -m
 
 # Install Homebrew
+mkdir /home/linuxbrew/
+chown dev:dev /home/linuxbrew/
 runuser -l dev -s /usr/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) &> /dev/null"
 
 # Install brew packages
