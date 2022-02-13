@@ -3,6 +3,11 @@
 set -e
 set -o pipefail
 
-# Install Homebrew
+# Add users and groups
+useradd dev -m
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) > /dev/null"
+# Install Homebrew
+runuser -l dev -s /usr/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) &> /dev/null"
+
+# Install brew packages
+runuser -l dev -s /usr/bin/bash -c "brew bundle install"
