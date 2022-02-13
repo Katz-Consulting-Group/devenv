@@ -6,7 +6,7 @@ Release=impish
 Format=gpt_ext4
 ImageVersion=0.1.0
 Bootable=True
-Encrypt=all
+# Encrypt=all
 # Minimize=True
 
 [Content]
