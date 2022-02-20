@@ -1,0 +1,10 @@
+- hosts: lab
+  roles:
+    - role: pyenv
+      pyenv_root: "{{ ansible_env.HOME }}/.ghq/github.com/pyenv/pyenv"
+      pyenv_version: v2.2.4
+      pyenv_update: false
+      pyenv_is_dependencies_installed: false
+      pyenv_rc_path: "{{ ansible_env.HOME }}/.bashrc"
+      pyenv_darwin_build_dependencies:
+        - readline

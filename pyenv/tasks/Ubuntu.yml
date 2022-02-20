@@ -1,0 +1,7 @@
+---
+- name: Install Ubuntu build dependencies
+  apt:
+    name: "{{ query('flattened', ['{{ pyenv_ubuntu_build_dependencies }}', '{{ pyenv_ubuntu_additional_build_dependencies }}']) }}"
+    update_cache: true
+  become: true
+  when: pyenv_is_dependencies_installed|bool

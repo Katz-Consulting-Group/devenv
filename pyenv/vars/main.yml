@@ -1,0 +1,4 @@
+---
+pyenv_os_families:
+  Debian: Debian
+  Darwin: Darwin
