@@ -8,17 +8,16 @@ sudo docker run -d -p 22:22 ansible_node_1
 #### Configure ansible hosts and credentials (for testing purposes, this should be configued with asymmetric encryption.) 
 <pre>
 sudo vim /etc/ansible/hosts
-
-[lab]
-127.0.0.1
 </pre>
 
-
 <pre>
+[lab]
+127.0.0.1
+
 [all:vars]
 ansible_connection=ssh
-ansible_user=vagrant
-ansible_ssh_pass=vagrant
+ansible_user=test
+ansible_ssh_pass=test
 </pre>
 
 
