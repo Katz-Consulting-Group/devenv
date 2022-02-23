@@ -42,5 +42,5 @@ ansible-playbook install-pyenv.yml
 </pre>
  
 <pre>
-ansible-playbook install-pyenv.yml -Kk
+ansible-playbook install-homebrew.yml -Kk
 </pre>
