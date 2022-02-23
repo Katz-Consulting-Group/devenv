@@ -40,3 +40,7 @@ ansible all -a "df -h" -u test
 <pre>
 ansible-playbook install-pyenv.yml
 </pre>
+ 
+<pre>
+ansible-playbook install-pyenv.yml -Kk
+</pre>
